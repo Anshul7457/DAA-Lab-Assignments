@@ -1,9 +1,8 @@
 #include<iostream>
 using namespace std;
-
 void linear_search()
 {
-    int x=1,N,key,temp=0,comp=1,j;
+    int x=1,N,key,temp=0,comp=0,j;
     cout << "Enter the number of elements to enter in array : " << endl;
     cin >> N;
     int arr[N];  
@@ -28,20 +27,20 @@ void linear_search()
     }
     if(temp==1)
     {
-        cout << "Test Case :" << x << " : Element Found At Index : " << j << endl;
+        cout << "Test Case : " << x << "\nElement Found At Index : " << j << endl;
+        cout << "Number of comparisons taken : " << comp+1 << endl;
     }
     else
     {
-        cout << "Test Case :" << x << " : Element Not Found" << endl;
+        cout << "Test Case :" << x << "\nElement Not Found" << endl;
+        cout << "Number of comparisons taken : " << comp << endl;
     }
-    cout << "Number of comparisons taken : " << comp << endl;  
     x++;
 }
-
 int main()
 {
     int t;
-    cout << "Enter the number of test cases you want to enter" << endl;
+    cout << "Enter the number of test cases :" << endl;
     cin >> t;
     while(t--)
     {
